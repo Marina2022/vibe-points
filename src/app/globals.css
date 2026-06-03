@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --color-graphite: #333333;
+  --color-floral: #ff8ddc;
+  --color-lavendula: #cdc1de;
+  --color-gray: #a1a1a1;
+  --color-gray-light: #f7f7f7;
+  --color-lime: #b8e05f;
+  --color-light: #f2f6f6;
+  --color-light-2: #fafafa;
+  --color-orange: #fd6e30;
+}
+
+@theme inline {
+  --font-manrope: var(--font-manrope);
+  --font-uncage: var(--font-uncage);
+
+  --color-graphite: var(--color-graphite);
+  --color-floral: var(--color-floral);
+  --color-lavendula: var(--color-lavendula);
+  --color-gray: var(--color-gray);
+  --color-gray-light: var(--color-gray-light);
+  --color-lime: var(--color-lime);
+  --color-light: var(--color-light);
+  --color-light-2: var(--color-light-2);
+  --color-orange: var(--color-orange);
+
+  --breakpoint-s: 380px;
+  --breakpoint-xs: 479px;
+  --breakpoint-md: 640px;
+  --breakpoint-mds: 768px;
+  --breakpoint-lg: 1023px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1440px;
+}
+
+html,
+body {
+  min-height: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-manrope), sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
