@@ -5,6 +5,7 @@ import {manrope, uncage} from "@/assets/fonts/fonts";
 import Header from "../components/layout/Header/Header";
 import PvzFooter from "@/components/layout/PvzFooter/PvzFooter";
 import {Toaster} from 'sonner'
+import ClientOnlyVhSetter from "@/components/ClientOnlyVhSetter/ClientOnlyVhSetter";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -150,6 +151,7 @@ export default function RootLayout({
           <Header/>
           <main className="flex-1">{children}</main>
           <Toaster richColors position="bottom-right" />
+          <ClientOnlyVhSetter />
           <PvzFooter />
         </div>
       </body>
