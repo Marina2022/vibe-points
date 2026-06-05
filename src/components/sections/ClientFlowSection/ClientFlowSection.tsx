@@ -25,9 +25,9 @@ const ClientFlowSection = () => {
     <section className="bg-light py-15 xs:py-25 rounded-t-[30px]">
       <div className="max-w-[1380px] mx-auto px-5">
         <h2 className="font-uncage text-left uppercase leading-[1.1] text-[26px] xs:text-[40px] text-graphite">
-          ВЫ ФОКУСИРУЕТЕСЬ НА СЕТИ, А ТОЧКА{" "} <br />
+          ВЫ ФОКУСИРУЕТЕСЬ НА СЕТИ, А ТОЧКА <br className="hidden lg:inline" />
           <span className="text-orange">
-            ГЕНЕРИРУЕТ НЕПРЕРЫВНЫЙ ПОТОК КЛИЕНТОВ
+            ГЕНЕРИРУЕТ НЕПРЕРЫВНЫЙ ПОТОК КЛИЕНТОВ
           </span>
         </h2>
 

@@ -47,7 +47,7 @@ const ForvibePointSection = () => {
 
       <div id="about" className="max-w-[1380px] mx-auto px-5 pt-0 xs:pt-0">
         <h2 className="w-full max-w-none xs:mx-auto xs:max-w-[830px] text-left lg:text-center font-uncage uppercase leading-[1.1] text-[22px] lg:text-[32px] text-graphite">
-          FORVIBE ПОИНТ — ЭТО точка выдачи заказов и офис
+          FORVIBE ПОИНТ — это точка выдачи заказов и офис
           <span className="text-orange">
             {" "}
             ОБЪЕДИНЁННЫЕ В ЕДИНУЮ СИСТЕМУ, ПЕРЕДАЮЩУЮ НАСТОЯЩИЙ ВАЙБ

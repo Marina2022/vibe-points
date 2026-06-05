@@ -24,8 +24,8 @@ const BONUS_CARDS = [
     bgClassName: "bg-floral",
   },
   {
-    title: "до 15%",
-    description: "с глубины структуры (Prime бонус)",
+    title: "до 15 уровней выплат",
+    description: ["(Prime бонус)"],
     bgClassName: "bg-white",
   },
   {

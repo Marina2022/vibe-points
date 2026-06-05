@@ -5,8 +5,8 @@ const BenefitFirstCard = () => {
     <div className="rounded-[30px] p-8 lg:p-[10px] bg-white">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 lg:min-h-[480px]">
         <div className="lg:p-15 flex flex-col justify-between gap-6 lg:gap-0">
-          <div className="font-uncage text-xl lg:text-[32px] leading-[1.1]">
-            Вы закрываете ключевые возражения будущих партнёров:
+          <div className="font-uncage text-[20px] xs:text-[32px] leading-[1.1]">
+            Вы закрываете <br /> ключевые возражения будущих партнёров:
           </div>
           <div className="flex flex-col md:flex-row justify-between gap-5">
             <div className="flex flex-col gap-6 lg:max-w-[200px]">

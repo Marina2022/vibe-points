@@ -16,8 +16,11 @@ const LogisticsSection = () => {
               order-1
               col-span-6
 
-              max-lg:order-2
-              max-lg:col-span-12
+              md:max-lg:order-2
+              md:max-lg:col-span-6
+
+              max-md:order-2
+              max-md:col-span-12
             "
             title="оформление и реализация заказов"
             intro="Покупки оформляются на платформе:"
@@ -34,8 +37,11 @@ const LogisticsSection = () => {
               overflow-hidden
               rounded-[30px]
 
-              max-lg:order-1
-              max-lg:col-span-12
+              md:max-lg:order-1
+              md:max-lg:col-span-12
+
+              max-md:order-1
+              max-md:col-span-12
             "
           >
             <img
@@ -53,8 +59,11 @@ const LogisticsSection = () => {
               overflow-hidden
               rounded-[30px]
 
-              max-lg:order-4
-              max-lg:col-span-12
+              md:max-lg:order-3
+              md:max-lg:col-span-6
+
+              max-md:order-4
+              max-md:col-span-12
             "
           >
             <img
@@ -69,8 +78,11 @@ const LogisticsSection = () => {
               order-4
               col-span-3
 
-              max-lg:order-3
-              max-lg:col-span-12
+              md:max-lg:order-4
+              md:max-lg:col-span-6
+
+              max-md:order-3
+              max-md:col-span-12
             "
             variant="lime"
             title="КОМПАНИЯ БЕРЁТ НА СЕБЯ:"
@@ -85,8 +97,11 @@ const LogisticsSection = () => {
               order-5
               col-span-3
 
-              max-lg:order-5
-              max-lg:col-span-12
+              md:max-lg:order-5
+              md:max-lg:col-span-6
+
+              max-md:order-5
+              max-md:col-span-12
             "
             variant="pink"
             title="масштабируйтесь и развивайтесь"
