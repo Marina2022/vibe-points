@@ -1,4 +1,5 @@
 import Button from "@/components/ui/Button";
+import ButtonWrapper from "@/components/ui/ButtonWrapper/ButtonWrapper";
 
 const BenefitThirdCard = () => {
   return (
@@ -16,9 +17,19 @@ const BenefitThirdCard = () => {
                 Вы создаёте офлайн-центр масштабирования структуры, где основной
                 доход формируется автоматически
               </span>
-              <Button className="xs:max-w-[260px]" variant="primary">
-                Узнать подробнее
-              </Button>
+
+              <ButtonWrapper>
+                {({setPopupOpen}) => (
+                  <Button
+                    className="xs:max-w-[260px]"
+                    variant="primary"
+                    onClick={() => setPopupOpen(true)}
+                  >
+                    Узнать подробнее
+                  </Button>
+                )}
+              </ButtonWrapper>
+
             </div>
           </div>
         </div>

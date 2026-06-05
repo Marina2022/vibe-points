@@ -1,6 +1,6 @@
-import Button from "@/components/ui/Button";
 import LogisticsInfoCard from "./LogisticsInfoCard";
 import LogisticsBulletCard from "./LogisticsBulletCard";
+import LogisticsButton from "./LogisticsButton/LogisticsButton";
 
 const LogisticsSection = () => {
   return (
@@ -113,9 +113,7 @@ const LogisticsSection = () => {
         </div>
 
         <div className="mt-15 flex justify-center">
-          <Button className="xs:max-w-[260px]" variant="primary">
-            Узнать подробнее
-          </Button>
+          <LogisticsButton />
         </div>
       </div>
     </section>

@@ -1,7 +1,10 @@
+'use client'
+
 import Button from "@/components/ui/Button";
 import FeatureCard from "./FeatureCard";
 import PointCard from "./PointCard";
 import VideoSection from "@/components/sections/VideoSection/VideoSection";
+import ButtonWrapper from "@/components/ui/ButtonWrapper/ButtonWrapper";
 
 const FEATURES = [
   {
@@ -43,11 +46,12 @@ const ForvibePointSection = () => {
         </div>
       </div>
 
-      <VideoSection />
+      <VideoSection/>
 
       <div id="about" className="max-w-[1380px] mx-auto px-5 pt-0 xs:pt-0">
-        <h2 className="w-full max-w-none xs:mx-auto xs:max-w-[830px] text-left lg:text-center font-uncage uppercase leading-[1.1] text-[22px] lg:text-[32px] text-graphite">
-          FORVIBE ПОИНТ — это точка выдачи заказов и офис
+        <h2
+          className="w-full max-w-none xs:mx-auto xs:max-w-[830px] text-left lg:text-center font-uncage uppercase leading-[1.1] text-[22px] lg:text-[32px] text-graphite">
+          FORVIBE ПОИНТ — это точка выдачи заказов и офис
           <span className="text-orange">
             {" "}
             ОБЪЕДИНЁННЫЕ В ЕДИНУЮ СИСТЕМУ, ПЕРЕДАЮЩУЮ НАСТОЯЩИЙ ВАЙБ
@@ -95,7 +99,7 @@ const ForvibePointSection = () => {
 
             <PointCard
               title="АТМОСФЕРА"
-              description={<>атмосфера, <br className="inline sm:hidden" /> к которой хочется прикоснуться</>}
+              description={<>атмосфера, <br className="inline sm:hidden"/> к которой хочется прикоснуться</>}
               bgClassName="bg-lime"
               className="col-span-6 lg:col-span-3 lg:min-h-[320px] order-last lg:order-none"
             />
@@ -110,7 +114,17 @@ const ForvibePointSection = () => {
         </div>
 
         <div className="flex justify-center mt-15">
-          <Button className="xs:max-w-[260px]">Получить презентацию</Button>
+          <ButtonWrapper>
+            {({setPopupOpen}) => (
+              <Button
+                className="xs:max-w-[260px]"
+                variant="primary"
+                onClick={() => setPopupOpen(true)}
+              >
+                Получить презентацию
+              </Button>
+            )}
+          </ButtonWrapper>
         </div>
       </div>
     </section>

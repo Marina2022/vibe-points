@@ -1,0 +1,31 @@
+@use '@/assets/styles/mixins' as *;
+
+.underlay {
+  position: fixed;
+  z-index: 3000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0 0 0/.35);
+}
+
+.popup {
+  z-index: 3001;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 500px;
+  border-radius: 16px;
+  background: #fff;
+  padding: 32px;
+  max-width: 484px;
+
+  @include m {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    padding: 24px 16px;
+  }
+}

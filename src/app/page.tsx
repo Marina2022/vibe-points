@@ -1,3 +1,4 @@
+
 import ForvibePointSection from "@/components/sections/ForvibePointSection/ForvibePointSection";
 import HeroSection from "@/components/sections/HeroSection/HeroSection";
 import BenefitsSection from "@/components/sections/BenefitsSection/BenefitsSection";

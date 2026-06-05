@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
+import type {Metadata} from "next";
 import "./globals.scss";
 import {Inter} from "next/font/google";
-import { manrope, uncage } from "../fonts/fonts";
+import {manrope, uncage} from "@/assets/fonts/fonts";
 import Header from "../components/layout/Header/Header";
-import Footer from "../components/layout/Footer";
 import PvzFooter from "@/components/layout/PvzFooter/PvzFooter";
-
+import {Toaster} from 'sonner'
 
 const inter = Inter({
   variable: "--font-inter",
@@ -148,8 +147,9 @@ export default function RootLayout({
         className={`${manrope.variable} ${uncage.variable} ${inter.variable} h-full antialiased`}
       >
         <div className="flex min-h-screen flex-col">
-          <Header />
+          <Header/>
           <main className="flex-1">{children}</main>
+          <Toaster richColors position="bottom-right" />
           <PvzFooter />
         </div>
       </body>

@@ -1,5 +1,8 @@
+'use client'
+
 import Button from "@/components/ui/Button";
 import BoosterStepCard from "./BoosterStepCard";
+import ButtonWrapper from "@/components/ui/ButtonWrapper/ButtonWrapper";
 
 const STEPS = [
   {
@@ -35,7 +38,17 @@ const BoosterSection = () => {
         </div>
 
         <div className="mt-10 xs:mt-15 flex justify-center">
-          <Button className="xs:max-w-[260px]">Оставить заявку</Button>
+          <ButtonWrapper>
+            {({setPopupOpen}) => (
+              <Button
+                className="xs:max-w-[260px]"
+                onClick={() => setPopupOpen(true)}
+              >
+                Оставить заявку
+              </Button>
+            )}
+          </ButtonWrapper>
+
         </div>
       </div>
     </section>

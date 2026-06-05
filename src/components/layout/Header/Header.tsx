@@ -1,19 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import {useEffect, useState} from "react";
+import {AnimatePresence, motion} from "framer-motion";
 import HeaderLogo from "./HeaderLogo";
 import HeaderNavigation from "./HeaderNavigation";
 import HeaderBurger from "./HeaderBurger";
 import HeaderMobileMenu from "./HeaderMobileMenu";
 import Button from "@/components/ui/Button";
+import ButtonWrapper from "@/components/ui/ButtonWrapper/ButtonWrapper";
 
 const NAVIGATION_ITEMS = [
-  { title: "О франшизе", href: "#about" },
-  { title: "Условия", href: "#conditions" },
-  { title: "Выгода", href: "#benefits" },
-  { title: "Инструменты", href: "#tools" },
-  { title: "Вопрос", href: "#faq" },
+  {title: "О франшизе", href: "#about"},
+  {title: "Условия", href: "#conditions"},
+  {title: "Выгода", href: "#benefits"},
+  {title: "Инструменты", href: "#tools"},
+  {title: "Вопрос", href: "#faq"},
 ];
 
 const Header = () => {
@@ -48,7 +49,7 @@ const Header = () => {
       >
         <div className="max-w-[1380px] mx-auto px-5">
           <div className="flex items-center justify-between">
-            <HeaderLogo isScrolled={isScrolled} />
+            <HeaderLogo isScrolled={isScrolled}/>
 
             <div className="hidden lg:block">
               <HeaderNavigation
@@ -58,9 +59,16 @@ const Header = () => {
             </div>
 
             <div className="hidden lg:block">
-              <Button variant="secondary" isScrolled={isScrolled}>
-                Получить презентацию
-              </Button>
+              <ButtonWrapper>
+                {({setPopupOpen}) => (
+                  <Button
+                    variant="secondary" isScrolled={isScrolled}
+                    onClick={() => setPopupOpen(true)}
+                  >
+                    Получить презентацию
+                  </Button>
+                )}
+              </ButtonWrapper>
             </div>
 
             <HeaderBurger
@@ -81,10 +89,10 @@ const Header = () => {
         {isMenuOpen && (
           <motion.div
             key="overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            transition={{duration: 0.3, ease: "easeInOut"}}
             onClick={closeMenu}
             className="lg:hidden fixed inset-0 z-40 bg-black/40 cursor-pointer"
           />

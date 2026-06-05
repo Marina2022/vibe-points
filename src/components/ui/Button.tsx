@@ -8,6 +8,7 @@ interface ButtonProps {
   className?: string;
   href?: string;
   isScrolled?: boolean;
+  onClick?: () => void;
 }
 
 const Button = ({
@@ -16,6 +17,8 @@ const Button = ({
   className = "",
   href,
   isScrolled = false,
+                  onClick
+
 }: ButtonProps) => {
   const baseClasses = `
     flex items-center justify-center
@@ -80,7 +83,7 @@ const Button = ({
     );
   }
 
-  return <button className={classes}>{children}</button>;
+  return <button onClick={onClick} className={classes}>{children}</button>;
 };
 
 export default Button;

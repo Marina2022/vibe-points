@@ -1,0 +1,31 @@
+@use '@/assets/styles/mixins' as *;
+
+.icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px;
+  border: #F74A3F 2px solid;
+  border-radius: 16px;
+  font-family: Manrope, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #F74A3F;
+  background: #f3e5e4;
+  min-width: 400px;
+  max-width: 700px;
+  width: auto;
+  min-height: 60px;
+
+  @include m {
+    min-width: unset;
+    max-width: calc(100vw - 32px) ;
+  }
+}
+

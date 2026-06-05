@@ -1,5 +1,8 @@
+'use client'
+
 import Button from "@/components/ui/Button";
 import SupportItem from "./SupportItem";
+import ButtonWrapper from "@/components/ui/ButtonWrapper/ButtonWrapper";
 
 const SUPPORT_ITEMS = [
   {
@@ -32,8 +35,9 @@ const SupportSection = () => {
   return (
     <section id="tools" className="bg-light py-17 xs:py-25 lg:py-20 md:py-15 rounded-t-[30px] -mt-6">
       <div className="max-w-[1380px] mx-auto px-5">
-        <h2 className="text-center font-uncage uppercase leading-[1.1] text-[26px] xs:text-[40px] text-graphite lg:text-[34px] md:text-[28px]">
-          ИНСТРУМЕНТЫ И ПОДДЕРЖКА ОТ КОМПАНИИ
+        <h2
+          className="text-center font-uncage uppercase leading-[1.1] text-[26px] xs:text-[40px] text-graphite lg:text-[34px] md:text-[28px]">
+          ИНСТРУМЕНТЫ И ПОДДЕРЖКА ОТ КОМПАНИИ
         </h2>
 
         <div className="mt-10 xs:mt-15 rounded-[30px] bg-white lg:mt-10 md:rounded-[24px]">
@@ -53,7 +57,8 @@ const SupportSection = () => {
                   "квалификация от Амбассадора ПРО",
                   "помещение от 30 до 100 м²",
                   <>
-                    Стабильный товарооборот (не менее <b>2000–2500 PV</b> за последние 3 месяца или <b>500 000–650 000 ₽ ТО</b> в месяц)
+                    Стабильный товарооборот (не менее <b>2000–2500 PV</b> за последние 3 месяца или <b>500 000–650 000 ₽
+                    ТО</b> в месяц)
                   </>
                 ]}
                 bgClassName="bg-lavendula "
@@ -72,9 +77,17 @@ const SupportSection = () => {
         </div>
 
         <div className="mt-15 flex justify-center lg:mt-10">
-          <Button className="xs:max-w-[260px] w-full" variant="primary">
-            Получить презентацию
-          </Button>
+          <ButtonWrapper>
+            {({setPopupOpen}) => (
+              <Button
+                className="xs:max-w-[260px]"
+                variant="primary"
+                onClick={() => setPopupOpen(true)}
+              >
+                Получить презентацию
+              </Button>
+            )}
+          </ButtonWrapper>
         </div>
       </div>
     </section>

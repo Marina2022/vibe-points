@@ -1,0 +1,49 @@
+@use '@/assets/styles/mixins' as *;
+
+.cityInputWrapper {
+  position: relative;
+  //z-index: 0;
+}
+
+.list {
+  list-style: 'none';
+  margin: 0;
+  padding: 8px;
+  border: 1px solid #f8f9fa;
+  border-top: none;
+  position: absolute;
+  background: white;
+  width: 100%;
+  z-index: 10;
+  border-radius: 0 0 24px 24px;
+  overflow-y: auto;
+
+  @-moz-document url-prefix() {
+    scrollbar-width: thin;
+    scrollbar-color: var(--lime) rgba(37, 37, 38, 0.1);
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px; /* Ширина скроллбара */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--lime);
+    border-radius: 16px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba(37, 37, 38, 0.1);
+    border-radius: 16px;
+  }
+}
+
+.listItem {
+  padding: 6px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,19 @@
+@use '@/assets/styles/mixins' as *;
+
+.btn {
+  width: 48px;
+  height: 48px;
+  border: #F8F9FA 2px solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  right: 32px;
+
+  @include m {
+    top: 24px;
+    right: 16px;
+  }
+}

@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Button from "@/components/ui/Button";
+import ButtonWrapper from "@/components/ui/ButtonWrapper/ButtonWrapper";
 
 interface NavigationItem {
   title: string;
@@ -58,9 +59,18 @@ const HeaderMobileMenu = ({ items, isOpen, onClose }: HeaderMobileMenuProps) => 
               ))}
             </ul>
 
-            <Button variant="secondary" className="mt-8 max-w-full xs:max-w-[250px]">
-              Получить презентацию
-            </Button>
+            <ButtonWrapper>
+              {({setPopupOpen}) => (
+                <Button
+                  variant="secondary" className="mt-8 max-w-full xs:max-w-[250px]"
+                  onClick={() => {
+                    setPopupOpen(true)
+                  }}
+                >
+                  Получить презентацию
+                </Button>
+              )}
+            </ButtonWrapper>
           </nav>
         </motion.div>
       )}

@@ -1,0 +1,29 @@
+@use '@/assets/styles/mixins' as *;
+
+.popup {
+  top: 52% !important;
+  z-index: 20;
+  max-width: calc(100% - 40px);
+  width: 484px;
+  padding: 24px;
+  padding-right: 8px !important;
+
+  @include m {
+    padding-right: 8px !important;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 30px;
+  right: 24px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+  @include mm {
+    right: 20px;
+  }
+}

@@ -1,5 +1,8 @@
+'use client'
+
 import Button from "@/components/ui/Button";
 import ClientFlowStep from "./ClientFlowStep";
+import ButtonWrapper from "@/components/ui/ButtonWrapper/ButtonWrapper";
 
 const STEPS = [
   {
@@ -25,14 +28,14 @@ const ClientFlowSection = () => {
     <section className="bg-light py-15 xs:py-25 rounded-t-[30px]">
       <div className="max-w-[1380px] mx-auto px-5">
         <h2 className="font-uncage text-left uppercase leading-[1.1] text-[26px] xs:text-[40px] text-graphite">
-          ВЫ ФОКУСИРУЕТЕСЬ НА СЕТИ, А ТОЧКА <br className="hidden lg:inline" />
+          ВЫ ФОКУСИРУЕТЕСЬ НА СЕТИ, А ТОЧКА <br className="hidden lg:inline"/>
           <span className="text-orange">
             ГЕНЕРИРУЕТ НЕПРЕРЫВНЫЙ ПОТОК КЛИЕНТОВ
           </span>
         </h2>
 
         <p className="mt-6 font-manrope text-lg lg:text-2xl text-gray lg:text-left">
-          Вам необходимо выполнить <br className="inline sm:hidden" /> 4 простых шага:
+          Вам необходимо выполнить <br className="inline sm:hidden"/> 4 простых шага:
         </p>
 
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-4">
@@ -56,9 +59,17 @@ const ClientFlowSection = () => {
         </div>
 
         <div className="mt-10 xs:mt-15 flex justify-center">
-          <Button className="xs:max-w-[260px]" variant="primary">
-            Получить презентацию
-          </Button>
+          <ButtonWrapper>
+            {({setPopupOpen}) => (
+              <Button
+                className="xs:max-w-[260px]"
+                variant="primary"
+                onClick={() => setPopupOpen(true)}
+              >
+                Получить презентацию
+              </Button>
+            )}
+          </ButtonWrapper>
         </div>
       </div>
     </section>

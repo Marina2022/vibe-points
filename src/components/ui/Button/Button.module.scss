@@ -1,0 +1,51 @@
+@use '@/assets/styles/mixins' as *;
+
+.button {
+  color: var(--black);
+  height: 60px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lime);
+  border-radius: 60px;
+  transition: all .2s ease-in-out;
+
+
+  @media (hover: hover) {
+    &:hover {
+      background: #ACE52C;
+      transition: all .1s ease-in-out;
+
+    }
+  }
+
+  &:active {
+    background: #ACE52C;
+    opacity: .8;
+  }
+
+  &:disabled {
+    background: #F8F9FA;
+    color: rgba(37, 37, 38, .5);
+  }
+
+  @include m {
+    width: 100%;
+  }
+}
+
+.whiteBtn {
+  border: 2px solid rgba(241, 241, 241, 1) !important;
+  background: #fff !important;
+
+  @media (hover: hover) {
+    &:hover {
+      background: var(--black) !important;
+      border: 2px solid var(--black) !important;
+      color: #fff;
+    }
+  }
+}
+
