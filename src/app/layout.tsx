@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
-import "./globals.css";
-
+import "./globals.scss";
+import {Inter} from "next/font/google";
 import { manrope, uncage } from "../fonts/fonts";
 import Header from "../components/layout/Header/Header";
 import Footer from "../components/layout/Footer";
+import PvzFooter from "@/components/layout/PvzFooter/PvzFooter";
+
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "700"]
+});
 
 export const metadata: Metadata = {
   title: "FORVIBE ПОИНТ — Франшиза с нулевым роялти",
@@ -137,12 +145,12 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${manrope.variable} ${uncage.variable} h-full antialiased`}
+        className={`${manrope.variable} ${uncage.variable} ${inter.variable} h-full antialiased`}
       >
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="flex-1">{children}</main>
-          <Footer />
+          <PvzFooter />
         </div>
       </body>
     </html>
