@@ -1,6 +1,6 @@
 import style from './CityInput.module.scss';
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
-import { SelectedCity } from "@/types/selectedCity";
+import { SelectedCity } from "@/types";
 
 const DADATA_TOKEN = '62233f8282816d1ca07d1bb07fcaeb2f76dd111f';
 
