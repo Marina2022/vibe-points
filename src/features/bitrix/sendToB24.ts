@@ -1,60 +1,3 @@
-// 'use server'
-//
-// interface RequestBody  {
-//   title: string,
-//   first_name: string,
-//   last_name: string,
-//   pat_name?: string,
-//   login?: string,
-//   id?: string,
-//   phone: string,
-//   email: string,
-//   city: string,
-//   comment?: string
-//   telegram?: string
-// }
-//
-// export const sendToB24 = async (body: RequestBody) => {
-//
-//   try {
-//     const res = await fetch(`${process.env.API_URL}/b24lead`, {
-//       method: "POST",
-//       headers: {
-//         'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify(body)
-//     });
-//
-//     console.log("res = ", res)
-//
-//     if (!res.ok) {
-//       let errorMessage = `Не удалось отправить данные по заявке - ${res.status} `;
-//
-//       try {
-//         const data = await res.json();
-//         if (data?.message) {
-//           errorMessage = `Не удалось отправить данные по заявке - ${data.message}, статус ответа - ${res.status}`;
-//         }
-//
-//         if (data?.detail)  {
-//           errorMessage = `Не удалось отправить данные по заявке - ${data.detail}, статус ответа - ${res.status}`;
-//         }
-//
-//       } catch (e) {
-//         console.log('Ошибка при чтении тела ответа', e);
-//       }
-//       console.log(errorMessage, res);
-//       return {error: errorMessage, errorStatus: res.status};
-//     }
-//
-//     return await res.json();
-//
-//   } catch (err) {
-//     console.error('Ошибка sendToB24:', err);
-//     return {error: err instanceof Error ? err.message : 'Неизвестная ошибка'};
-//   }
-// }
-
 'use server'
 
 interface RequestBody {
@@ -72,6 +15,7 @@ interface RequestBody {
 }
 
 export const sendToB24 = async (body: RequestBody) => {
+
   try {
     const res = await fetch(`${process.env.API_URL}/b24lead`, {
       method: "POST",
@@ -83,7 +27,7 @@ export const sendToB24 = async (body: RequestBody) => {
 
     const data = await res.json().catch(() => null);
 
-    console.log("B24 response:", data);
+    //console.log("B24 response:", data);
 
     if (!res.ok) {
       const errorMessage =

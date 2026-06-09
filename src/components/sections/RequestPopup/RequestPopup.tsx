@@ -1,9 +1,10 @@
-import React, {Dispatch, SetStateAction} from 'react';
+import React, {Dispatch, SetStateAction, useEffect} from 'react';
 
 import s from "./RequestPopup.module.scss";
 
 import Popup from "@/components/ui/Popup/Popup";
 import RequestPopupContent from './RequestPopupContent/RequestPopupContent';
+import {showErrorToast} from "@/components/ui/ToastCustom/ToastCustom";
 
 
 type Props = {
@@ -12,9 +13,18 @@ type Props = {
 }
 
 const RequestPopup = ({popupOpen, setPopupOpen}: Props) => {
+
+  // временно отключила кнопку
+  useEffect(() => {
+    if (popupOpen) {
+      showErrorToast("Заявки принимаются с 1 июля")
+      setPopupOpen(false)
+    }
+
+  }, [popupOpen])
+
   return (
     <Popup open={popupOpen} setOpen={setPopupOpen} classname={s.popup}>
-
       <button onClick={() => setPopupOpen(false)} className={s.closeBtn}>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fillRule="evenodd" clipRule="evenodd"
