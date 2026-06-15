@@ -4,7 +4,7 @@ import MarketingBonusCard from "./MarketingBonusCard";
 const INCOME_CARDS = [
   {
     number: "01",
-    title: "5% от оборота",
+    title: "15% от оборота",
     description: "Вашего FORVIBE ПОИНТ",
     bgClassName: "bg-light",
   },
