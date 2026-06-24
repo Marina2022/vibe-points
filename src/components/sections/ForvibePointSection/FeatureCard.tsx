@@ -13,7 +13,7 @@ const FeatureCard = ({ number, title, description }: FeatureCardProps) => {
     <div className="flex flex-col items-center text-center gap-6">
       <BadgeNumber number={number} variant="lime" />
 
-      <h3 className="font-uncage text-lg uppercase leading-[1.1] text-graphite">
+      <h3 className="font-uncage text-lg uppercase leading-[1.1] text-graphite whitespace-pre-line">
         {title}
       </h3>
 
