@@ -15,13 +15,13 @@ type Props = {
 const RequestPopup = ({popupOpen, setPopupOpen}: Props) => {
 
   // временно отключила кнопку
-  useEffect(() => {
-    if (popupOpen) {
-      showErrorToast("Заявки принимаются с 1 июля")
-      setPopupOpen(false)
-    }
-
-  }, [popupOpen])
+  // useEffect(() => {
+  //   if (popupOpen) {
+  //     showErrorToast("Заявки принимаются с 1 июля")
+  //     setPopupOpen(false)
+  //   }
+  //
+  // }, [popupOpen])
 
   return (
     <Popup open={popupOpen} setOpen={setPopupOpen} classname={s.popup}>
