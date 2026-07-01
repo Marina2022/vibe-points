@@ -20,7 +20,7 @@ const PvzFooter = () => {
           </div>
           <ul className={s.links}>
             <li>
-              <Link target="_blank" href="https://cdn.for-vibe.ru/tools/for_business/MP_VIBE_3.0.pdf">Маркетинг-план VIBE</Link>
+              <Link target="_blank" href="https://cdn.for-vibe.ru/tools/for_business/MP_VIBE_3.1.pdf">Маркетинг-план VIBE</Link>
             </li>
             <li>
               <a target="_blank" href="https://for-vibe.ru/sales-terms">Правила дистанционной торговли</a>

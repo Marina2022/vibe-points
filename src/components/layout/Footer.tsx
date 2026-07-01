@@ -34,7 +34,7 @@ const Footer = () => {
             <li>
               <Link
                 target="_blank"
-                href="https://cdn.for-vibe.ru/tools/for_business/MP_VIBE_3.0.pdf"
+                href="https://cdn.for-vibe.ru/tools/for_business/MP_VIBE_3.1.pdf"
                 className="hover:text-black transition-colors"
               >
                 Маркетинг-план VIBE
